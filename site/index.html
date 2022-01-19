@@ -1,9 +1,54 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>hello coursera!</title>
-</head>
-<body>
-<h1>Hello coursera! It´s a great course!</h1> 
-</body>
-</html>
+<div class="banner bgWhite rounded">
+    <div class="">
+        <button class="close"><i class="fas fa-times"></i></button>
+        <img src="https://cdn.pixabay.com/photo/2020/05/07/13/35/opel-5141544_960_720.png" class="w-100 padding20"
+            alt="Opel Rekord Cabriolet">
+    </div>
+    <div class="bgblack padding20  ">
+        <div class="w-100">
+            <p class="fontSize18 text-center">Opel Rekord Cabriolet</p>
+        </div>
+        <div class="w-100" *ngIf="bannerR == false">
+            <p class="fontSize14 text-center">From $30,000</p>
+            <div class="form-group marginT">
+                <select class="form-control" id="exampleFormControlSelect1" placeholder="Color">
+                    <option>Color</option>
+                    <option>Red</option>
+                    <option>White</option>
+                    <option>Black</option>
+                    <option>Pink</option>
+                </select>
+            </div>
+            <div class="form-group marginT">
+                <select class="form-control" id="exampleFormControlSelect1" placeholder="Model">
+                    <option>Model</option>
+                    <option>Experimental GT </option>
+                    <option>Aero GT </option>
+                    <option>Opel GT</option>
+                    <option>Opel GT2 Concept</option>
+                </select>
+            </div>
+            <button class="btn btn-light  fontSize14" *ngIf="bannerC == false" (click)="ShowContact()">Contact</button>
+        </div>
+        <div class="w-100" *ngIf="bannerC == true && bannerR == false">
+            <div class=" marginT">
+                <input type="text" class="form-control" placeholder="Name">
+            </div>
+            <div class="marginT">
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="email@example.com">
+            </div>
+            <div class=" marginT">
+                <input type="phone" class="form-control" placeholder="Phone">
+            </div>
+            <button class="btn btn-light  fontSize14" (click)="OnSend()">Send</button>
+        </div>
+        <div class="w-100" *ngIf="bannerR == true">
+            <div class="bgblack padding20 ">
+                <div class="d-flex align-items-start">
+                    <i class="fas fa-check-circle fontSize16"></i>
+                    <p class="fontSize16">We will get back to you as soon as possible.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
