@@ -1,0 +1,37 @@
+
+.navbar {
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 20px;
+    border: 2px solid black;
+    border-radius: 0;
+}
+
+body{
+	margin: 0;
+	font-size: 18px;
+	font-family: helvetica;
+}
+
+.cards{	
+	background-color: gray;
+
+	position: relative;
+}
+.cards p{
+	padding: 15px 20px 20px 20px;
+}
+.menu{
+	
+	text-align: center;
+	margin-top: 0;
+	right: 0;
+	font-size: 1.25em;
+	padding: 30px 15px 0px 15px;
+}
+.navbar-nav {
+    margin: 0 -15px;
+}
+ul li{
+	border: solid thin black;
+}
